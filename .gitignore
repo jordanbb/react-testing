@@ -14,9 +14,6 @@ dist
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
-.idea/modules.xml
-.idea/react-testing.iml
-.idea/vcs.xml
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
@@ -72,6 +69,5 @@ fabric.properties
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/phpstorm
-/.idea/jsLibraryMappings.xml
-/.idea/misc.xml
 /.idea/watcherTasks.xml
+/.idea/

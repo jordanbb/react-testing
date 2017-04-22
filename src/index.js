@@ -5,7 +5,7 @@ import './css/app.scss';
 class MyName extends React.Component {
     render() {
         return (
-            <div>Hello, my name is {this.props.name}</div>
+            <h1>Hello, my name is {this.props.name}</h1>
         )
     }
 }

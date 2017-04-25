@@ -8,7 +8,8 @@ module.exports = {
     entry: SRC_DIR + '/index.js',
     output: {
         path: DIST_DIR,
-        filename: 'app.bundle.js'
+        filename: 'app.bundle.js',
+        publicPath: '/'
     },
     devtool: "eval-source-map",
     module: {

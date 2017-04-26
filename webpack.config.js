@@ -12,6 +12,9 @@ module.exports = {
         publicPath: '/'
     },
     devtool: "eval-source-map",
+    resolve: {
+        modules: [SRC_DIR, "node_modules"]
+    },
     module: {
         rules: [
             {

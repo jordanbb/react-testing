@@ -1,6 +1,15 @@
+// NORMALIZE
 @import "~normalize.css";
-@import "./base/typography.scss";
 
-body {
-  background-color: pink;
-}
+// HELPERS
+@import "helpers/_variables";
+@import "helpers/_mixins";
+
+// BASE
+@import "base/_typography";
+
+// COMPONENTS
+@import "components/_authBackground";
+
+// SCENES
+@import "scenes/_auth";

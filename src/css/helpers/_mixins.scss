@@ -1,0 +1,214 @@
+// Font Style Selection
+@mixin font($style,$includeLineHeight: true) {
+
+  // Standard Paragraph Style Small
+  @if $style == standard-paragraph-small {
+    font-size: $standard-paragraph-small-font-size;
+    font-weight: $standard-paragraph-small-font-weight;
+
+    @if $includeLineHeight == true {
+      line-height: $standard-paragraph-small-line-height;
+    }
+
+  }
+
+  // Standard Paragraph Style Large
+  @if $style == standard-paragraph-large {
+    font-size: $standard-paragraph-large-font-size;
+    font-weight: $standard-paragraph-large-font-weight;
+
+    @if $includeLineHeight == true {
+      line-height: $standard-paragraph-large-line-height;
+    }
+
+  }
+
+  // Heading Style 1
+  @if $style == heading-style-1 {
+    font-size: $heading-style-1-font-size;
+    font-weight: $heading-style-1-font-weight;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-1-line-height;
+    }
+
+  }
+
+  // Heading Style 2
+  @if $style == heading-style-2 {
+    font-size: $heading-style-2-font-size;
+    font-weight: $heading-style-2-font-weight;
+    letter-spacing: $heading-style-2-letter-spacing;
+    text-transform: $heading-style-2-text-transform;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-2-line-height;
+    }
+
+  }
+
+  // Heading Style 3
+  @if $style == heading-style-3 {
+    font-size: $heading-style-3-font-size;
+    font-weight: $heading-style-3-font-weight;
+    letter-spacing: $heading-style-3-letter-spacing;
+    text-transform: $heading-style-3-text-transform;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-3-line-height;
+    }
+
+  }
+
+  // Heading Style 4
+  @if $style == heading-style-4 {
+    font-size: $heading-style-4-font-size;
+    font-weight: $heading-style-4-font-weight;
+    font-style: $heading-style-4-font-style;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-4-line-height;
+    }
+
+  }
+
+  // Heading Style 5
+  @if $style == heading-style-5 {
+    font-size: $heading-style-5-font-size;
+    font-weight: $heading-style-5-font-weight;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-5-line-height;
+    }
+
+  }
+
+  // Heading Style 6
+  @if $style == heading-style-6 {
+    font-size: $heading-style-6-font-size;
+    font-weight: $heading-style-6-font-weight;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-6-line-height;
+    }
+
+  }
+
+  // Heading Style 7
+  @if $style == heading-style-7 {
+    font-size: $heading-style-7-font-size;
+    font-weight: $heading-style-7-font-weight;
+    letter-spacing: $heading-style-7-letter-spacing;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-7-line-height;
+    }
+
+  }
+
+  // Heading Style 8
+  @if $style == heading-style-8 {
+    font-size: $heading-style-8-font-size;
+    font-weight: $heading-style-8-font-weight;
+    letter-spacing: $heading-style-8-letter-spacing;
+    text-transform: $heading-style-8-text-transform;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-8-line-height;
+    }
+
+  }
+
+  // Heading Style 9
+  @if $style == heading-style-9 {
+    font-size: $heading-style-9-font-size;
+    font-weight: $heading-style-9-font-weight;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-9-line-height;
+    }
+
+  }
+
+  // Heading Style 10
+  @if $style == heading-style-10 {
+    font-size: $heading-style-10-font-size;
+    font-weight: $heading-style-10-font-weight;
+    letter-spacing: $heading-style-10-letter-spacing;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-10-line-height;
+    }
+
+  }
+
+  // Heading Style 11
+  @if $style == heading-style-11 {
+    font-size: $heading-style-11-font-size;
+    font-weight: $heading-style-11-font-weight;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-11-line-height;
+    }
+
+  }
+
+  // Heading Style 12
+  @if $style == heading-style-12 {
+    font-size: $heading-style-12-font-size;
+    font-weight: $heading-style-12-font-weight;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-12-line-height;
+    }
+
+  }
+
+  // Heading Style 13
+  @if $style == heading-style-13 {
+    font-size: $heading-style-13-font-size;
+    font-weight: $heading-style-13-font-weight;
+    letter-spacing: $heading-style-13-letter-spacing;
+    text-transform: $heading-style-13-text-transform;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-13-line-height;
+    }
+
+  }
+
+  // Heading Style 14
+  @if $style == heading-style-14 {
+    font-size: $heading-style-14-font-size;
+    font-weight: $heading-style-14-font-weight;
+    letter-spacing: $heading-style-14-letter-spacing;
+
+    @if $includeLineHeight == true {
+      line-height: $heading-style-14-line-height;
+    }
+
+  }
+
+  // Font Style 12px Regular
+  @if $style == font-style-12px-regular {
+    font-size: $font-style-12px-regular-font-size;
+    font-weight: $font-style-12px-regular-font-weight;
+
+    @if $includeLineHeight == true {
+      line-height: $font-style-12px-regular-line-height;
+    }
+
+  }
+
+}
+
+
+// Custom font selection
+@mixin setFontStyles($size: false,$weight: false,$style: false,$lineHeight: false,$letterSpacing: false,$textTransform: false) {
+  @if $size { font-size: $size; }
+  @if $weight { font-weight: $weight; }
+  @if $style { font-style: $style; }
+  @if $lineHeight { line-height: $lineHeight; }
+  @if $letterSpacing { letter-spacing: $letterSpacing; }
+  @if $textTransform { text-transform: $textTransform }
+}

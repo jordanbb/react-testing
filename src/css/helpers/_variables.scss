@@ -1,0 +1,169 @@
+//------------------------------------
+// COLORS
+//------------------------------------
+
+// Main App Colors
+$main-blue: #2D59F9;
+$main-blue-light: #3372FF;
+
+$main-yellow: #F2C444;
+$main-yellow-light: #FFD757;
+
+$main-red: #F45A3B;
+$main-red-light: #FF6F57;
+
+$main-green: #00D68F;
+$main-green-light: #03E589;
+
+// Dark to Light Scale
+$dark-to-light-1: #171923;
+$dark-to-light-2: #292C3F;
+$dark-to-light-3: #3A3E59;
+$dark-to-light-4: #4C5372;
+$dark-to-light-5: #626989;
+$dark-to-light-6: #7A83A5;
+$dark-to-light-7: #949CBF;
+$dark-to-light-8: #ADB5D8;
+$dark-to-light-9: #CCD4F2;
+$dark-to-light-10: #E6EBFF;
+$dark-to-light-11: #F3F5FF;
+$dark-to-light-12: #F5F7FC;
+
+// Basic Colors
+$white: #fff;
+$black: #000;
+
+// Misc Colors
+$very-dark-blue: #1A1C26;
+
+//------------------------------------
+// FONTS
+//------------------------------------
+
+// Sofia Pro
+$sofia-font-family: "sofia-pro", sans-serif;
+
+// Proxima Nova
+$proxima-nova-font-family: "proxima-nova", sans-serif;
+
+// Sofia Pro Font Weights
+$sofia-font-weight-extra-light: 200;
+$sofia-font-weight-light: 300;
+$sofia-font-weight-regular: 400;
+$sofia-font-weight-bold: 700;
+$sofia-font-weight-black: 900;
+
+// Proxima Nova Font Weights
+$proxima-nova-font-weight-regular: 400;
+$proxima-nova-font-weight-light: 300;
+
+// Main Typography Font Weights
+$text-style-extra-light: $sofia-font-weight-extra-light;
+$text-style-light: $sofia-font-weight-light;
+$text-style-regular: $sofia-font-weight-regular;
+$text-style-bold: $sofia-font-weight-bold;
+$text-style-black: $sofia-font-weight-black;
+
+// Standard Paragraph Style Small
+$standard-paragraph-small-font-size: 14px;
+$standard-paragraph-small-line-height: 20px;
+$standard-paragraph-small-font-weight: $text-style-regular;
+
+// Standard Paragraph Style Large
+$standard-paragraph-large-font-size: 16px;
+$standard-paragraph-large-line-height: 24px;
+$standard-paragraph-large-font-weight: $text-style-regular;
+
+// Heading Style 1
+$heading-style-1-font-size: 40px;
+$heading-style-1-line-height: 52px;
+$heading-style-1-font-weight: $text-style-light;
+
+// Heading Style 2
+$heading-style-2-font-size: 16px;
+$heading-style-2-line-height: 24px;
+$heading-style-2-text-transform: uppercase;
+$heading-style-2-letter-spacing: 0.075em;
+$heading-style-2-font-weight: $text-style-bold;
+
+// Heading Style 3
+$heading-style-3-font-size: 16px;
+$heading-style-3-line-height: 24px;
+$heading-style-3-text-transform: uppercase;
+$heading-style-3-letter-spacing: 0.075em;
+$heading-style-3-font-weight: $text-style-regular;
+
+// Heading Style 4
+$heading-style-4-font-size: 16px;
+$heading-style-4-line-height: 24px;
+$heading-style-4-font-style: italic;
+$heading-style-4-font-weight: $text-style-light;
+
+// Heading Style 5
+$heading-style-5-font-size: 16px;
+$heading-style-5-line-height: 24px;
+$heading-style-5-font-weight: $text-style-bold;
+
+// Heading Style 6
+$heading-style-6-font-size: 24px;
+$heading-style-6-line-height: 32px;
+$heading-style-6-font-weight: $text-style-bold;
+
+// Heading Style 7
+$heading-style-7-font-size: 48px;
+$heading-style-7-line-height: 58px;
+$heading-style-7-letter-spacing: 0.010em;
+$heading-style-7-font-weight: $text-style-extra-light;
+
+// Heading Style 8
+$heading-style-8-font-size: 12px;
+$heading-style-8-line-height: 18px;
+$heading-style-8-letter-spacing: 0.1em;
+$heading-style-8-text-transform: uppercase;
+$heading-style-8-font-weight: $text-style-regular;
+
+// Heading Style 9
+$heading-style-9-font-size: 18px;
+$heading-style-9-line-height: 21px;
+$heading-style-9-font-weight: $text-style-bold;
+
+// Heading Style 10
+$heading-style-10-font-size: 72px;
+$heading-style-10-line-height: 72px;
+$heading-style-10-letter-spacing: 0.010em;
+$heading-style-10-font-weight: $text-style-extra-light;
+
+// Heading Style 11
+$heading-style-11-font-size: 24px;
+$heading-style-11-line-height: 32px;
+$heading-style-11-font-weight: $text-style-regular;
+
+// Heading Style 12
+$heading-style-12-font-size: 38px;
+$heading-style-12-line-height: 38px;
+$heading-style-12-font-weight: $text-style-regular;
+
+// Heading Style 13
+$heading-style-13-font-size: 10px;
+$heading-style-13-line-height: 10px;
+$heading-style-13-letter-spacing: 0.1em;
+$heading-style-13-text-transform: uppercase;
+$heading-style-13-font-weight: $text-style-regular;
+
+// Heading Style 14
+$heading-style-14-font-size: 20px;
+$heading-style-14-line-height: 20px;
+$heading-style-14-letter-spacing: 0.025em;
+$heading-style-14-font-weight: $text-style-light;
+
+// Font Style 12px Regular
+$font-style-12px-regular-font-size: 12px;
+$font-style-12px-regular-line-height: 16px;
+$font-style-12px-regular-font-weight: $text-style-regular;
+
+// Font Style 11px .025em Letter Spacing Regular
+$font-style-11px-regular-font-size: 11px;
+$font-style-11px-regular-line-height: 15px;
+$font-style-11px-regular-font-weight: $text-style-regular;
+
+

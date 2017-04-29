@@ -4,14 +4,18 @@ const path = require("path");
 const DIST_DIR = path.resolve(__dirname,"dist");
 const SRC_DIR = path.resolve(__dirname,"src");
 
+const extractSass = new ExtractTextPlugin({
+    filename: "css/app.bundle.css",
+    disable: process.env.NODE_ENV === "development"
+});
+
 module.exports = {
     entry: SRC_DIR + '/index.js',
     output: {
         path: DIST_DIR,
-        filename: 'app.bundle.js',
-        publicPath: '/'
+        filename: 'app.bundle.js'
     },
-    devtool: "eval-source-map",
+    devtool: "source-map",
     resolve: {
         modules: [SRC_DIR, "node_modules"]
     },
@@ -25,8 +29,17 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
+                    use: [{
+                        loader: "css-loader", options: {
+                            sourceMap: true
+                        }
+                    }, {
+                        loader: "sass-loader", options: {
+                            sourceMap: true
+                        }
+                    }],
+                    // use style-loader in development
+                    fallback: "style-loader"
                 })
             }
         ]
@@ -37,9 +50,7 @@ module.exports = {
             filename: 'index.html',
             hash: true
         }),
-        new ExtractTextPlugin({
-            filename: "css/app.bundle.css"
-        })
+        extractSass
     ],
     devServer: {
         compress: true,

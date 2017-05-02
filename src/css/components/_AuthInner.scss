@@ -1,0 +1,27 @@
+.auth-inner-container {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.auth-inner {
+  flex-flow: row nowrap;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.auth-branding-container {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: $dark-to-light-3;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}

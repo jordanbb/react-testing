@@ -11,6 +11,9 @@ textarea {
 }
 
 body {
+  overflow: hidden;
+  user-select: none;
+  background: transparent;
   font-size: 16px;
   line-height: 1em;
 }

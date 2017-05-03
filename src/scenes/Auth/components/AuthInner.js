@@ -7,9 +7,10 @@ const AuthInner = (props) => {
             <div className="auth-inner">
                 <div className="auth-branding-container">
                     <div className="auth-logo">
-                        <BIQLogoText fillColor="#fff" />
+                        <BIQLogoText />
                     </div>
                 </div>
+                <hr />
                 <div className="auth-scenes">
                     {props.children}
                 </div>

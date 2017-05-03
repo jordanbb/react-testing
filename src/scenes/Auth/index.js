@@ -6,7 +6,7 @@ import AuthInner from './components/AuthInner';
 class Auth extends React.Component {
     render(){
         return (
-            <div className="auth-container" >
+            <div className="auth-container">
                 <AuthBackground/>
                 <AuthInner>
                     <Login/>

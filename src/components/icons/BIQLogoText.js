@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const BIQLogoIcon = (props) => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 206 41">
+        <svg className="BIQ-logo-text" xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 206 41">
             <title>BlueIQ</title>
             <g>
                 <path fill={props.fillColor} d="M.41,32.92A.44.44,0,0,1,0,32.51v-31A.45.45,0,0,1,.41,1H9c8.3,0,10.4,4.15,10.4,7.41,0,3.84-3.24,6.41-6.89,7.27,4.38.27,9.26,3.52,9.26,8.81,0,5-3.92,8.4-10.54,8.4ZM8.71,3.61c-1.73,0-3.6,0-5.34-.14.09,2,.09,3.84.09,5.64s0,3.88-.09,5.78c1.41-.09,3-.09,4.33-.09,5.61,0,8-2.48,8-5.74C15.74,5.46,13.5,3.61,8.71,3.61Zm9.4,20.59c0-4.06-2.74-7-9.17-7-1.82,0-3.7,0-5.57-.14.09,2.12.09,4.29.09,6.46s0,4.56-.09,6.86c2.55-.09,5.16-.09,7.62-.09C15.74,30.34,18.11,28.22,18.11,24.2Z"/>
@@ -14,6 +15,12 @@ const BIQLogoIcon = (props) => {
             </g>
         </svg>
     )
+};
+
+BIQLogoIcon.propTypes = {
+    fillColor: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string
 };
 
 BIQLogoIcon.defaultProps = {

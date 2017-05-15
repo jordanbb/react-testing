@@ -38,7 +38,6 @@ module.exports = {
                             sourceMap: true
                         }
                     }],
-                    // use style-loader in development
                     fallback: "style-loader"
                 })
             }

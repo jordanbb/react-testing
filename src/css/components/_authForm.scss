@@ -3,7 +3,7 @@
   h1 {
     @include font(heading-style-3);
     color: $dark-to-light-3;
-    margin-bottom: 24px;
+    margin: 0 0 24px 0;
     text-align: center;
   }
 

@@ -212,3 +212,11 @@
   @if $letterSpacing { letter-spacing: $letterSpacing; }
   @if $textTransform { text-transform: $textTransform }
 }
+
+// Input placeholder including vendor prefixes
+@mixin inputPlaceholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

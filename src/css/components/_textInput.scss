@@ -2,7 +2,7 @@
     TEXT BASED INPUTS
 \*------------------------------------*/
 
-.input_container {
+.input-text-container {
   position: relative;
   margin: 0 0 48px 0;
 
@@ -17,15 +17,15 @@
     transition: all 0.3s ease;
     box-sizing: border-box;
 
-    @at-root .input_container.size_regular input {
+    @at-root .input-text-container.size-regular input {
       @include font(heading-style-5, false);
     }
 
-    @at-root .input_container.size_large input {
+    @at-root .input-text-container.size-large input {
       @include font(heading-style-6, false);
     }
 
-    @at-root .input_container.light input {
+    @at-root .input-text-container.light input {
       color: $dark-to-light-8;
 
       &.invalid {
@@ -43,7 +43,7 @@
 
     }
 
-    @at-root .input_container.dark input {
+    @at-root .input-text-container.dark input {
       color: $dark-to-light-3;
 
       &.invalid {
@@ -70,11 +70,11 @@
     &:focus {
       outline: none;
 
-      @at-root .input_container.light input:not(.invalid):not(.available):not([readonly]):focus {
+      @at-root .input-text-container.light input:not(.invalid):not(.available):not([readonly]):focus {
         color: $main-blue-light;
       }
 
-      @at-root .input_container.dark input:not(.invalid):not(.available):not([readonly]):focus {
+      @at-root .input-text-container.dark input:not(.invalid):not(.available):not([readonly]):focus {
         color: $main-blue;
 
         @include inputPlaceholder {
@@ -86,14 +86,14 @@
 
     }
 
-    @at-root .input_container.has_search input {
+    @at-root .input-text-container.has_search input {
       padding-left: 20px;
     }
 
-    @at-root .input_container.clickable input {
+    @at-root .input-text-container.clickable input {
       cursor: pointer;
 
-      @at-root .input_container.light.clickable input {
+      @at-root .input-text-container.light.clickable input {
 
         &:hover {
           color: $main-blue-light;
@@ -107,7 +107,7 @@
 
       }
 
-      @at-root .input_container.dark.clickable input {
+      @at-root .input-text-container.dark.clickable input {
 
         &:hover {
           color: $main-blue;
@@ -131,34 +131,34 @@
     left: 0;
     transition: all 0.2s ease;
 
-    @at-root .input_container.size_regular label {
+    @at-root .input-text-container.size-regular label {
       @include font(heading-style-5, false);
       line-height: 16px;
       transform: translateY(-20%);
     }
 
-    @at-root .input_container.size_large label {
+    @at-root .input-text-container.size-large label {
       @include font(heading-style-6, false);
       line-height: 24px;
     }
 
-    @at-root .input_container input.filled ~ label,
-    .input_container input:focus ~ label {
+    @at-root .input-text-container input.filled ~ label,
+    .input-text-container input:focus ~ label {
       font-style: italic;
       font-weight: $text-style-light;
     }
 
-    @at-root .input_container.size_regular input.filled ~ label,
-    .input_container.size_regular input:focus  ~ label {
+    @at-root .input-text-container.size-regular input.filled ~ label,
+    .input-text-container.size-regular input:focus  ~ label {
       transform: translateY(-150%);
     }
 
-    @at-root .input_container.size_large input.filled ~ label,
-    .input_container.size_large input:focus  ~ label {
+    @at-root .input-text-container.size-large input.filled ~ label,
+    .input-text-container.size-large input:focus  ~ label {
       transform: translate(-18%, -120%) scale(0.67)
     }
 
-    @at-root .input_container.light {
+    @at-root .input-text-container.light {
 
       label {
         color: $dark-to-light-8;
@@ -178,7 +178,7 @@
 
     }
 
-    @at-root .input_container.dark {
+    @at-root .input-text-container.dark {
 
       label {
         color: $dark-to-light-3;
@@ -204,7 +204,7 @@
 
   }
 
-  .input_text_static_label {
+  .input-text-static-label {
     @include font(heading-style-4,false);
     position: absolute;
     top: -20px;
@@ -215,17 +215,17 @@
     display: block;
     transition: all 0.2s ease;
 
-    @at-root .input_container.dark {
+    @at-root .input-text-container.dark {
 
-      input.invalid ~ .input_text_static_label {
+      input.invalid ~ .input-text-static-label {
         color: $main-red;
       }
 
     }
 
-    @at-root .input_container.light {
+    @at-root .input-text-container.light {
 
-      input.invalid ~ .input_text_static_label {
+      input.invalid ~ .input-text-static-label {
         color: $main-red-light;
       }
 
@@ -235,52 +235,52 @@
 
 }
 
-.input_bar {
+.input-text-underline {
   position: relative;
   left: 0;
   width: 100%;
   height: 4px;
   transition: all 0.3s ease;
 
-  &.hide_bar {
+  &.hide-bar {
     width: 0;
   }
 
-  @at-root .input_container.light {
+  @at-root .input-text-container.light {
 
-    .input_bar {
+    .input-text-underline {
       background: $dark-to-light-8;
     }
 
-    & input:focus ~ .input_bar {
+    & input:focus ~ .input-text-underline {
       background: $main-blue-light;
     }
 
-    & input.invalid ~ .input_bar {
+    & input.invalid ~ .input-text-underline {
       background: $main-red-light;
     }
 
-    & input.available ~ .input_bar {
+    & input.available ~ .input-text-underline {
       background: $main-green-light;
     }
 
   }
 
-  @at-root .input_container.dark {
+  @at-root .input-text-container.dark {
 
-    .input_bar {
+    .input-text-underline {
       background: $dark-to-light-3;
     }
 
-    & input:focus ~ .input_bar {
+    & input:focus ~ .input-text-underline {
       background: $main-blue;
     }
 
-    & input.invalid ~ .input_bar {
+    & input.invalid ~ .input-text-underline {
       background: $main-red;
     }
 
-    & input.available ~ .input_bar {
+    & input.available ~ .input-text-underline {
       background: $main-green;
     }
 
@@ -288,236 +288,34 @@
 
 }
 
-.input_error {
+.input-text-error {
   @include font(standard-paragraph-large);
   position: absolute;
   width: 100%;
   margin: 4px 0;
 
-  @at-root .input_container.light {
+  @at-root .input-text-container.light {
 
-    & input.invalid ~ .input_error {
+    & input.invalid ~ .input-text-error {
       color: $main-red-light;
     }
 
-    & input.available ~ .input_error {
+    & input.available ~ .input-text-error {
       color: $main-green-light;
     }
 
   }
 
-  @at-root .input_container.dark {
+  @at-root .input-text-container.dark {
 
-    & input.invalid ~ .input_error {
+    & input.invalid ~ .input-text-error {
       color: $main-red;
     }
 
-    & input.available ~ .input_error {
+    & input.available ~ .input-text-error {
       color: $main-green;
     }
 
-  }
-
-}
-
-.input_checkmark {
-  display: block;
-  position: absolute;
-  right: -50px;
-  top: 50%;
-  margin: -15px 0 0 0;
-  width: 12px;
-  height: 20px;
-  transform: rotate(30deg);
-  visibility: hidden;
-  opacity: 0;
-  transition: all .3s ease;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-
-    @at-root .light > & {
-      background: $main-green-light;
-    }
-
-    @at-root .dark > & {
-      background: $main-green;
-    }
-
-  }
-
-  &:before {
-    width: 3px;
-    height: 20px;
-    right: 0;
-    top: 0;
-  }
-
-  &:after {
-    width: 10px;
-    height: 3px;
-    right: 1px;
-    bottom: 1px;
-    transform: rotate(15deg);
-  }
-
-  .input_container input.available ~ & {
-    visibility: visible;
-    right: 0;
-    opacity: 1;
-  }
-}
-
-.input_search_icon {
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  transition: background-color 0.3s ease;
-  @include prefix(mask, url(../images/search-icon-type-1.svg) no-repeat, webkit);
-
-  .input_container.size_regular & {
-    top: 4px;
-  }
-
-  .input_container.dark & {
-    background-color: $dark-to-light-3;
-  }
-
-  .input_container.dark input:focus ~ & {
-    background-color: $main-blue;
-  }
-
-}
-
-.input_text_save_container {
-  position: absolute;
-  top: -22px;
-  right: 0;
-  overflow: hidden;
-
-  .button_loading_icon {
-    display: block;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-
-    > div {
-      width: 8px;
-      height: 8px;
-      background-color: $main-blue;
-      margin-right: 0;
-    }
-
-  }
-
-}
-
-.input_text_save_link {
-  display: flex;
-  flex-flow: row nowrap;
-  transition: transform 0.3s ease, border-color 0.2s ease;
-  align-items: flex-start;
-  cursor: pointer;
-  //border-bottom: 2px solid transparent;
-  transform: translateX(100%) translateZ(0);
-
-  /*
-  &:hover {
-
-    .input_container.dark & {
-      border-color: $main-blue;
-    }
-
-    .input_container.light & {
-      border-color: $main-blue-light;
-    }
-
-  }
-  */
-
-  .input_text_save_container.active & {
-    transform: translateX(0) translateZ(0);
-  }
-
-  .input_text_save_container.loading & {
-    display: none;
-  }
-
-}
-
-.input_text_save_link_text {
-  @include font(standard-paragraph-small);
-
-  .input_container.dark & {
-    color: $main-blue;
-  }
-
-  .input_container.light & {
-    color: $main-blue-light;
-  }
-
-}
-
-.input_text_save_link_checkmark {
-  display: block;
-  position: relative;
-  width: 10px;
-  height: 14px;
-  transform: rotate(30deg);
-  //transform: rotate(30deg) translateY(2px);
-  margin-right: 4px;
-  padding-left: 4px;
-  transition: all 0.3s ease;
-
-  /*
-  .input_text_save_link:hover & {
-    transform: scale(1.2) translate(-1px,1px) rotate(30deg);
-  }
-  */
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-
-    @at-root .input_container.light & {
-      background: $main-blue-light;
-    }
-
-    @at-root .input_container.dark & {
-      background: $main-blue;
-    }
-
-  }
-
-  &:before {
-    width: 2px;
-    height: 100%;
-    right: 0;
-    top: 0;
-  }
-
-  &:after {
-    width: 50%;
-    height: 2px;
-    right: 1px;
-    bottom: 1px;
-    transform: rotate(15deg);
-  }
-
-}
-
-.input_text_save_loading_container {
-  display: none;
-  width: 60px;
-  height: 20px;
-
-  .input_text_save_container.loading & {
-    display: block;
   }
 
 }

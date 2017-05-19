@@ -19,6 +19,7 @@
   "author": "Jordan Newby",
   "license": "MIT",
   "dependencies": {
+    "classnames": "^2.2.5",
     "normalize.css": "^6.0.0",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",

@@ -33,7 +33,10 @@ module.exports = {
                     use: [{
                         loader: "css-loader",
                         options: {
-                            sourceMap: true
+                            sourceMap: true,
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]__[local]--[hash:base64:5]'
                         },
                     }, {
                         loader: "sass-loader",

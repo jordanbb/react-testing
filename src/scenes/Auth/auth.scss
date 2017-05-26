@@ -1,8 +1,15 @@
-:local(.container) {
+@import '~css/helpers/variables';
+
+.base {
   width: 500px;
   height: 500px;
-  background: red;
+  background: $dark-to-light-10;
   position: absolute;
   top: 100px;
   left: 100px;
+}
+
+.right {
+  composes: base;
+  right: 100px;
 }

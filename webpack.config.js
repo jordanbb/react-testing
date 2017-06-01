@@ -17,7 +17,10 @@ module.exports = {
     },
     devtool: "source-map",
     resolve: {
-        modules: [SRC_DIR, "node_modules"]
+        modules: [SRC_DIR, "node_modules"],
+        alias: {
+            Shared: path.resolve(__dirname, 'src/shared/')
+        }
     },
     module: {
         rules: [

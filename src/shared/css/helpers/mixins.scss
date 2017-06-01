@@ -202,7 +202,6 @@
 
 }
 
-
 // Custom font selection
 @mixin setFontStyles($size: false,$weight: false,$style: false,$lineHeight: false,$letterSpacing: false,$textTransform: false) {
   @if $size { font-size: $size; }

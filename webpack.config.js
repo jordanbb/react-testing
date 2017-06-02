@@ -38,10 +38,20 @@ module.exports = {
                         options: {
                             sourceMap: true,
                             modules: true,
-                            importLoaders: 1,
+                            importLoaders: 2,
                             localIdentName: '[name]__[local]--[hash:base64:5]'
                         },
-                    }, {
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            plugins: [
+                                require('autoprefixer')
+                            ],
+                            sourceMap: true
+                        }
+                    },
+                    {
                         loader: "sass-loader",
                         options: {
                             sourceMap: true

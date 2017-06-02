@@ -1,6 +1,7 @@
 @import '~shared/css/helpers/variables';
 
 .base {
+  display: flex;
   width: 500px;
   height: 500px;
   background: $dark-to-light-10;

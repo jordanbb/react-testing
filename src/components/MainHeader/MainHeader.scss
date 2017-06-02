@@ -1,0 +1,30 @@
+@import '~shared/css/helpers/variables';
+
+.header {
+  width: 100%;
+  flex: 100%;
+  z-index: 999;
+  background: $very-dark-blue;
+  border-bottom: 1px solid rgba($dark-to-light-3, 0.6);
+  box-shadow: 0 0 2px 0 $black;
+}
+
+.inside {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 18px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+
+  :global .BIQ-logo-text {
+    fill: $dark-to-light-8;
+  }
+
+}

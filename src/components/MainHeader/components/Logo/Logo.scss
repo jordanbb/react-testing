@@ -1,0 +1,16 @@
+@import '~shared/css/helpers/variables';
+
+.container {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+
+  :global .BIQ-logo-text {
+
+    path {
+      fill: $dark-to-light-8;
+    }
+
+  }
+
+}

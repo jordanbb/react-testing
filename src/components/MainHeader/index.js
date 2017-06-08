@@ -1,13 +1,13 @@
 import React from "react";
-import BIQLogoIcon from "components/icons/BIQLogoText";
+import Logo from "./components/Logo";
 import PropTypes from "prop-types";
 import styles from "./MainHeader.scss";
 
 const MainHeader = props => {
     return (
-        <header className={styles.header}>
+        <header className={styles.fixed}>
             <div className={styles.inside}>
-                <BIQLogoIcon width="143px" height="29px" />
+                <Logo />
             </div>
         </header>
     )

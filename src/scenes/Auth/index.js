@@ -1,7 +1,6 @@
 import React from "react";
 import MainHeader from "components/MainHeader";
-import Login from "./scenes/Login"
-import AuthInner from './components/AuthInner';
+import AuthScenesContainer from "./components/AuthScenesContainer"
 //import styles from './auth.scss';
 import cx from 'classnames';
 
@@ -10,6 +9,7 @@ class Auth extends React.Component {
         return (
             <div>
                 <MainHeader />
+                <AuthScenesContainer />
             </div>
         )
     }

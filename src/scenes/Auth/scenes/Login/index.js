@@ -1,5 +1,4 @@
 import React from "react";
-import AuthForm from "scenes/Auth/components/AuthForm";
 import TextInput from "components/TextInput";
 
 class Login extends React.Component {

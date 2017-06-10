@@ -1,76 +1,115 @@
-.input-text-container {
+@import '~shared/css/helpers/variables';
+@import '~shared/css/helpers/mixins';
+
+.container {
   position: relative;
   margin: 0 0 48px 0;
+}
 
-  input {
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    padding: 0 0 4px 0;
-    background: transparent;
-    border: none;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
+input {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  padding: 0 0 4px 0;
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 
-    @at-root .input-text-container.size-regular input {
-      @include font(heading-style-5, false);
-    }
+  .container.sizeRegular & {
+    @include font(heading-style-5, false);
+  }
 
-    @at-root .input-text-container.size-large input {
-      @include font(heading-style-6, false);
-    }
+  .container.sizeLarge & {
+    @include font(heading-style-6, false);
+  }
 
-    @at-root .input-text-container.light input {
-      color: $dark-to-light-8;
+  .container.light & {
+    color: $dark-to-light-8;
 
-      &.invalid {
-        color: $main-red-light;
-
-        @include inputPlaceholder {
-          color: $main-red-light;
-        }
-
-      }
-
-      &.available {
-        color: $main-green-light;
-      }
-
-    }
-
-    @at-root .input-text-container.dark input {
-      color: $dark-to-light-3;
-
-      &.invalid {
-        color: $main-red;
-
-        @include inputPlaceholder {
-          color: $main-red;
-        }
-
-      }
-
-      &.available {
-        color: $main-green;
-      }
+    &.invalid {
+      color: $main-red-light;
 
       @include inputPlaceholder {
-        color: $dark-to-light-3;
-        opacity: 1;
-        transition: color 0.3s ease;
+        color: $main-red-light;
       }
 
     }
 
-    &:focus {
-      outline: none;
+    &.available {
+      color: $main-green-light;
+    }
 
-      @at-root .input-text-container.light input:not(.invalid):not(.available):not([readonly]):focus {
-        color: $main-blue-light;
+  }
+
+  .container.dark & {
+    color: $dark-to-light-3;
+
+    &.invalid {
+      color: $main-red;
+
+      @include inputPlaceholder {
+        color: $main-red;
       }
 
-      @at-root .input-text-container.dark input:not(.invalid):not(.available):not([readonly]):focus {
+    }
+
+    &.available {
+      color: $main-green;
+    }
+
+    @include inputPlaceholder {
+      color: $dark-to-light-3;
+      opacity: 1;
+      transition: color 0.3s ease;
+    }
+
+  }
+
+  &:focus {
+    outline: none;
+
+    .container.light &:not(.invalid):not(.available):not([readonly]):focus {
+      color: $main-blue-light;
+    }
+
+    .container.dark &:not(.invalid):not(.available):not([readonly]):focus {
+      color: $main-blue;
+
+      @include inputPlaceholder {
+        color: $main-blue;
+        opacity: 1;
+      }
+
+    }
+
+  }
+
+  .container.has_search & {
+    padding-left: 20px;
+  }
+
+  .container.clickable & {
+    cursor: pointer;
+
+    @at-root .container.light.clickable input {
+
+      &:hover {
+        color: $main-blue-light;
+
+        @include inputPlaceholder {
+          color: $main-blue-light;
+          opacity: 1;
+        }
+
+      }
+
+    }
+
+    @at-root .container.dark.clickable input {
+
+      &:hover {
         color: $main-blue;
 
         @include inputPlaceholder {
@@ -82,156 +121,119 @@
 
     }
 
-    @at-root .input-text-container.has_search input {
-      padding-left: 20px;
+  }
+
+}
+
+label {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  transition: all 0.2s ease;
+
+  @at-root .container.sizeRegular label {
+    @include font(heading-style-5, false);
+    line-height: 16px;
+    transform: translateY(-20%);
+  }
+
+  @at-root .container.sizeLarge label {
+    @include font(heading-style-6, false);
+    line-height: 24px;
+  }
+
+  @at-root .container input.filled ~ label,
+  .container input:focus ~ label {
+    font-style: italic;
+    font-weight: $text-style-light;
+  }
+
+  @at-root .container.sizeRegular input.filled ~ label,
+  .container.sizeRegular input:focus  ~ label {
+    transform: translateY(-150%);
+  }
+
+  @at-root .container.sizeLarge input.filled ~ label,
+  .container.sizeLarge input:focus  ~ label {
+    transform: translate(-18%, -120%) scale(0.67)
+  }
+
+  @at-root .container.light {
+
+    label {
+      color: $dark-to-light-8;
     }
 
-    @at-root .input-text-container.clickable input {
-      cursor: pointer;
+    input:not([readonly]):not(.invalid):not(.available):focus  ~ label {
+      color: $main-blue-light;
+    }
 
-      @at-root .input-text-container.light.clickable input {
+    input.invalid ~ label {
+      color: $main-red-light;
+    }
 
-        &:hover {
-          color: $main-blue-light;
-
-          @include inputPlaceholder {
-            color: $main-blue-light;
-            opacity: 1;
-          }
-
-        }
-
-      }
-
-      @at-root .input-text-container.dark.clickable input {
-
-        &:hover {
-          color: $main-blue;
-
-          @include inputPlaceholder {
-            color: $main-blue;
-            opacity: 1;
-          }
-
-        }
-
-      }
-
+    input.available ~ label {
+      color: $main-green-light;
     }
 
   }
 
-  label {
-    position: absolute;
-    top: 8px;
-    left: 0;
-    transition: all 0.2s ease;
+  @at-root .container.dark {
 
-    @at-root .input-text-container.size-regular label {
-      @include font(heading-style-5, false);
-      line-height: 16px;
-      transform: translateY(-20%);
+    label {
+      color: $dark-to-light-3;
     }
 
-    @at-root .input-text-container.size-large label {
-      @include font(heading-style-6, false);
-      line-height: 24px;
+    input.filled ~ label {
+      color: $dark-to-light-6;
     }
 
-    @at-root .input-text-container input.filled ~ label,
-    .input-text-container input:focus ~ label {
-      font-style: italic;
-      font-weight: $text-style-light;
+    input:not([readonly]):not(.invalid):not(.available):focus  ~ label {
+      color: $main-blue;
     }
 
-    @at-root .input-text-container.size-regular input.filled ~ label,
-    .input-text-container.size-regular input:focus  ~ label {
-      transform: translateY(-150%);
+    input.invalid ~ label {
+      color: $main-red;
     }
 
-    @at-root .input-text-container.size-large input.filled ~ label,
-    .input-text-container.size-large input:focus  ~ label {
-      transform: translate(-18%, -120%) scale(0.67)
-    }
-
-    @at-root .input-text-container.light {
-
-      label {
-        color: $dark-to-light-8;
-      }
-
-      input:not([readonly]):not(.invalid):not(.available):focus  ~ label {
-        color: $main-blue-light;
-      }
-
-      input.invalid ~ label {
-        color: $main-red-light;
-      }
-
-      input.available ~ label {
-        color: $main-green-light;
-      }
-
-    }
-
-    @at-root .input-text-container.dark {
-
-      label {
-        color: $dark-to-light-3;
-      }
-
-      input.filled ~ label {
-        color: $dark-to-light-6;
-      }
-
-      input:not([readonly]):not(.invalid):not(.available):focus  ~ label {
-        color: $main-blue;
-      }
-
-      input.invalid ~ label {
-        color: $main-red;
-      }
-
-      input.available ~ label {
-        color: $main-green;
-      }
-
-    }
-
-  }
-
-  .input-text-static-label {
-    @include font(heading-style-4,false);
-    position: absolute;
-    top: -20px;
-    left: 0;
-    color: $dark-to-light-6;
-    text-align: left;
-    pointer-events: none;
-    display: block;
-    transition: all 0.2s ease;
-
-    @at-root .input-text-container.dark {
-
-      input.invalid ~ .input-text-static-label {
-        color: $main-red;
-      }
-
-    }
-
-    @at-root .input-text-container.light {
-
-      input.invalid ~ .input-text-static-label {
-        color: $main-red-light;
-      }
-
+    input.available ~ label {
+      color: $main-green;
     }
 
   }
 
 }
 
-.input-text-underline {
+.input-text-static-label {
+  @include font(heading-style-4,false);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: $dark-to-light-6;
+  text-align: left;
+  pointer-events: none;
+  display: block;
+  transition: all 0.2s ease;
+
+  @at-root .container.dark {
+
+    input.invalid ~ .input-text-static-label {
+      color: $main-red;
+    }
+
+  }
+
+  @at-root .container.light {
+
+    input.invalid ~ .input-text-static-label {
+      color: $main-red-light;
+    }
+
+  }
+
+}
+
+.underline {
   position: relative;
   left: 0;
   width: 100%;
@@ -242,41 +244,41 @@
     width: 0;
   }
 
-  @at-root .input-text-container.light {
+  @at-root .container.light {
 
-    .input-text-underline {
+    .underline {
       background: $dark-to-light-8;
     }
 
-    & input:focus ~ .input-text-underline {
+    & input:focus ~ .underline {
       background: $main-blue-light;
     }
 
-    & input.invalid ~ .input-text-underline {
+    & input.invalid ~ .underline {
       background: $main-red-light;
     }
 
-    & input.available ~ .input-text-underline {
+    & input.available ~ .underline {
       background: $main-green-light;
     }
 
   }
 
-  @at-root .input-text-container.dark {
+  @at-root .container.dark {
 
-    .input-text-underline {
+    .underline {
       background: $dark-to-light-3;
     }
 
-    & input:focus ~ .input-text-underline {
+    & input:focus ~ .underline {
       background: $main-blue;
     }
 
-    & input.invalid ~ .input-text-underline {
+    & input.invalid ~ .underline {
       background: $main-red;
     }
 
-    & input.available ~ .input-text-underline {
+    & input.available ~ .underline {
       background: $main-green;
     }
 
@@ -284,31 +286,31 @@
 
 }
 
-.input-text-error {
+.error {
   @include font(standard-paragraph-large);
   position: absolute;
   width: 100%;
   margin: 4px 0;
 
-  @at-root .input-text-container.light {
+  @at-root .container.light {
 
-    & input.invalid ~ .input-text-error {
+    & input.invalid ~ .error {
       color: $main-red-light;
     }
 
-    & input.available ~ .input-text-error {
+    & input.available ~ .error {
       color: $main-green-light;
     }
 
   }
 
-  @at-root .input-text-container.dark {
+  @at-root .container.dark {
 
-    & input.invalid ~ .input-text-error {
+    & input.invalid ~ .error {
       color: $main-red;
     }
 
-    & input.available ~ .input-text-error {
+    & input.available ~ .error {
       color: $main-green;
     }
 

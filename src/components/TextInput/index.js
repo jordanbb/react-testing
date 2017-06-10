@@ -1,5 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
+import styles from "./textInput.scss"
+
+let cx = classNames.bind(styles);
 
 class TextInput extends React.Component {
     constructor(props){
@@ -16,16 +19,23 @@ class TextInput extends React.Component {
         })
     }
     render(){
+
+        let containerClassNames = cx({
+            container: true,
+            sizeRegular: true,
+            light: true
+        });
+
         return (
-            <div className="input-text-container size-regular dark">
+            <div className={containerClassNames}>
                 <input
                     type={this.props.type}
                     value={this.state.value}
                     onChange={this.handleChange}
                     />
                 <label>{this.props.labelText}</label>
-                <div className="input-text-underline"></div>
-                <div className="input-text-error"></div>
+                <div className={styles.underline}></div>
+                <div className={styles.error}></div>
             </div>
         )
     }

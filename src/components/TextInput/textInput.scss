@@ -86,7 +86,7 @@ input {
 
   }
 
-  .container.has_search & {
+  .container.hasSearch & {
     padding-left: 20px;
   }
 
@@ -131,13 +131,13 @@ label {
   left: 0;
   transition: all 0.2s ease;
 
-  @at-root .container.sizeRegular label {
+  .container.sizeRegular & {
     @include font(heading-style-5, false);
     line-height: 16px;
     transform: translateY(-20%);
   }
 
-  @at-root .container.sizeLarge label {
+  .container.sizeLarge & {
     @include font(heading-style-6, false);
     line-height: 24px;
   }
@@ -240,7 +240,7 @@ label {
   height: 4px;
   transition: all 0.3s ease;
 
-  &.hide-bar {
+  &.hideBar {
     width: 0;
   }
 

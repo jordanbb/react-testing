@@ -22,7 +22,7 @@ class TextInput extends React.Component {
 
         let containerClassNames = cx({
             container: true,
-            sizeRegular: true,
+            sizeLarge: true,
             light: true
         });
 

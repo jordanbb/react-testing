@@ -8,8 +8,12 @@ class Login extends React.Component {
         return (
             <AuthLayout>
                 <form className={styles.form} noValidate>
-                    <TextInput type="text" labelText="Username" />
-                    <TextInput type="password" labelText="Password" />
+                    <div className={styles.inputContainer}>
+                        <TextInput type="text" labelText="Username" />
+                    </div>
+                    <div className={styles.inputContainer}>
+                        <TextInput type="password" labelText="Password" />
+                    </div>
                 </form>
             </AuthLayout>
         )

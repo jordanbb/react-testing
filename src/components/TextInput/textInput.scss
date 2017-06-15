@@ -6,7 +6,7 @@
   margin: 0 0 48px 0;
 }
 
-input {
+.input {
   position: relative;
   z-index: 1;
   display: block;
@@ -93,7 +93,7 @@ input {
   .container.clickable & {
     cursor: pointer;
 
-    @at-root .container.light.clickable input {
+    @at-root .container.light.clickable .input {
 
       &:hover {
         color: $main-blue-light;
@@ -107,7 +107,7 @@ input {
 
     }
 
-    @at-root .container.dark.clickable input {
+    @at-root .container.dark.clickable .input {
 
       &:hover {
         color: $main-blue;
@@ -125,7 +125,7 @@ input {
 
 }
 
-label {
+.label {
   position: absolute;
   top: 8px;
   left: 0;
@@ -142,37 +142,37 @@ label {
     line-height: 24px;
   }
 
-  @at-root .container input.filled ~ label,
-  .container input:focus ~ label {
+  @at-root .container .input.filled ~ .label,
+  .container .input:focus ~ .label {
     font-style: italic;
     font-weight: $text-style-light;
   }
 
-  @at-root .container.sizeRegular input.filled ~ label,
-  .container.sizeRegular input:focus  ~ label {
+  @at-root .container.sizeRegular .input.filled ~ .label,
+  .container.sizeRegular .input:focus  ~ .label {
     transform: translateY(-150%);
   }
 
-  @at-root .container.sizeLarge input.filled ~ label,
-  .container.sizeLarge input:focus  ~ label {
+  @at-root .container.sizeLarge .input.filled ~ .label,
+  .container.sizeLarge .input:focus  ~ .label {
     transform: translate(-18%, -120%) scale(0.67)
   }
 
   @at-root .container.light {
 
-    label {
+    .label {
       color: $dark-to-light-8;
     }
 
-    input:not([readonly]):not(.invalid):not(.available):focus  ~ label {
+    .input:not([readonly]):not(.invalid):not(.available):focus  ~ .label {
       color: $main-blue-light;
     }
 
-    input.invalid ~ label {
+    .input.invalid ~ .label {
       color: $main-red-light;
     }
 
-    input.available ~ label {
+    .input.available ~ .label {
       color: $main-green-light;
     }
 
@@ -180,23 +180,23 @@ label {
 
   @at-root .container.dark {
 
-    label {
+    .label {
       color: $dark-to-light-3;
     }
 
-    input.filled ~ label {
+    .input.filled ~ .label {
       color: $dark-to-light-6;
     }
 
-    input:not([readonly]):not(.invalid):not(.available):focus  ~ label {
+    .input:not([readonly]):not(.invalid):not(.available):focus  ~ .label {
       color: $main-blue;
     }
 
-    input.invalid ~ label {
+    .input.invalid ~ .label {
       color: $main-red;
     }
 
-    input.available ~ label {
+    .input.available ~ .label {
       color: $main-green;
     }
 
@@ -217,7 +217,7 @@ label {
 
   @at-root .container.dark {
 
-    input.invalid ~ .input-text-static-label {
+    .input.invalid ~ .input-text-static-label {
       color: $main-red;
     }
 
@@ -225,7 +225,7 @@ label {
 
   @at-root .container.light {
 
-    input.invalid ~ .input-text-static-label {
+    .input.invalid ~ .input-text-static-label {
       color: $main-red-light;
     }
 
@@ -250,15 +250,15 @@ label {
       background: $dark-to-light-8;
     }
 
-    & input:focus ~ .underline {
+    & .input:focus ~ .underline {
       background: $main-blue-light;
     }
 
-    & input.invalid ~ .underline {
+    & .input.invalid ~ .underline {
       background: $main-red-light;
     }
 
-    & input.available ~ .underline {
+    & .input.available ~ .underline {
       background: $main-green-light;
     }
 
@@ -270,15 +270,15 @@ label {
       background: $dark-to-light-3;
     }
 
-    & input:focus ~ .underline {
+    & .input:focus ~ .underline {
       background: $main-blue;
     }
 
-    & input.invalid ~ .underline {
+    & .input.invalid ~ .underline {
       background: $main-red;
     }
 
-    & input.available ~ .underline {
+    & .input.available ~ .underline {
       background: $main-green;
     }
 
@@ -294,11 +294,11 @@ label {
 
   @at-root .container.light {
 
-    & input.invalid ~ .error {
+    & .input.invalid ~ .error {
       color: $main-red-light;
     }
 
-    & input.available ~ .error {
+    & .input.available ~ .error {
       color: $main-green-light;
     }
 
@@ -306,11 +306,11 @@ label {
 
   @at-root .container.dark {
 
-    & input.invalid ~ .error {
+    & .input.invalid ~ .error {
       color: $main-red;
     }
 
-    & input.available ~ .error {
+    & .input.available ~ .error {
       color: $main-green;
     }
 

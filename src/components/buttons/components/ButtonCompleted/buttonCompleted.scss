@@ -5,10 +5,23 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  transition: all .3s ease;
+  animation: anim-in 0.3s ease-in-out forwards;
 
   :global .biq-checkmark-icon {
     stroke: $white;
+    stroke-width: 1px;
   }
 
+}
+
+
+@keyframes anim-in {
+  0% {
+    transform: translate(-50%,120%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%,-50%);
+    opacity: 1;
+  }
 }

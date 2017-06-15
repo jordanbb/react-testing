@@ -29,11 +29,12 @@ class TextInput extends React.Component {
         return (
             <div className={containerClassNames}>
                 <input
+                    className={styles.input}
                     type={this.props.type}
                     value={this.state.value}
                     onChange={this.handleChange}
                     />
-                <label>{this.props.labelText}</label>
+                <label className={styles.label}>{this.props.labelText}</label>
                 <div className={styles.underline}></div>
                 <div className={styles.error}></div>
             </div>

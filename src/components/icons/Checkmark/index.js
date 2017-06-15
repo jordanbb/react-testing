@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import './checkmark.scss'
 
 const Checkmark = (props) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 11.54 12.12">
             <title>Checkmark</title>
-            <polyline className={props.styleName} points="0.71 7.22 4.04 10.55 10.71 0.56"/>
+            <polyline className="biq-checkmark-icon" points="0.71 7.22 4.04 10.55 10.71 0.56"/>
         </svg>
     )
 };

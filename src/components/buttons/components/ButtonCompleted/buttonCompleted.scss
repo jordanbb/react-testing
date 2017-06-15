@@ -1,0 +1,13 @@
+@import '~shared/css/helpers/variables';
+
+.root {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: all .3s ease;
+}
+
+.checkmark {
+  //composes: root from "~components/icons/Checkmark/checkmark.scss";
+  stroke: $white;
+}

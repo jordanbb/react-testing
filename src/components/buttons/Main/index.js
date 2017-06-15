@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from 'classnames/bind';
 import styles from "./mainButton.scss";
+import ButtonCompleted from "../components/ButtonCompleted"
 
 let cx = classNames.bind(styles);
 
@@ -14,9 +15,14 @@ const MainButton = props => {
         disabled: props.isDisabled
     });
 
+    let buttonChildren = <button className={styles.button} type={props.type}>{props.text}</button>;
+    if(props.isCompleted){
+        buttonChildren = <ButtonCompleted />
+    }
+
     return (
         <div className={containerClassNames}>
-            <button className={styles.button} type={props.type}>{props.text}</button>
+            {buttonChildren}
         </div>
     )
 };

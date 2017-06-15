@@ -1,24 +1,24 @@
 // Font Style Selection
 @mixin font($style,$includeLineHeight: true) {
 
-  // Standard Paragraph Style Small
-  @if $style == standard-paragraph-small {
-    font-size: $standard-paragraph-small-font-size;
-    font-weight: $standard-paragraph-small-font-weight;
+  // Small Text Style
+  @if $style == small {
+    font-size: $text-small-font-size;
+    font-weight: $text-small-font-weight;
 
     @if $includeLineHeight == true {
-      line-height: $standard-paragraph-small-line-height;
+      line-height: $text-small-line-height;
     }
 
   }
 
-  // Standard Paragraph Style Large
-  @if $style == standard-paragraph-large {
-    font-size: $standard-paragraph-large-font-size;
-    font-weight: $standard-paragraph-large-font-weight;
+  // Primary Text Style
+  @if $style == primary {
+    font-size: $text-primary-font-size;
+    font-weight: $text-primary-font-weight;
 
     @if $includeLineHeight == true {
-      line-height: $standard-paragraph-large-line-height;
+      line-height: $text-primary-line-height;
     }
 
   }

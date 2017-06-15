@@ -1,9 +1,18 @@
+@import '~shared/css/helpers/variables';
+@import '~shared/css/helpers/mixins';
+
 .form {
-  display: flex;
-  flex-flow: row wrap;
   width: 100%;
 }
 
-.inputContainer {
-  flex: 100%;
+.footer {
+  @include font(primary);
+  display: block;
+  text-align: center;
+  color: $dark-to-light-8;
+  margin: 12px 0 0 0;
+}
+
+.link-test {
+  color: green;
 }

@@ -1,0 +1,52 @@
+@import '~shared/css/helpers/variables';
+@import '~shared/css/helpers/mixins';
+
+// BASE
+
+.root {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.with-underline {
+  border-bottom: 1px solid;
+}
+
+.without-underline {
+  border-bottom: 1px solid transparent;
+}
+
+// SIZING
+
+.small {
+  @include font(small);
+}
+
+.primary {
+  @include font(primary);
+}
+
+// COLORS
+
+.dtl-8-with-underline {
+  color: $dark-to-light-8;
+  border-color: $dark-to-light-6;
+}
+
+.hover-white {
+
+  &:hover {
+    color: $white;
+    border-color: white;
+  }
+
+}
+
+// Composed Classes
+// naming convention should be: {size} - {color} - {underline} - {hover color}
+
+.primary-dtl-8-with-underline-hover-white {
+  composes: root primary with-underline dtl-8-with-underline hover-white;
+}

@@ -1,5 +1,9 @@
 // Define stroke: {color} where used.
 
+.root {
+  display: block;
+}
+
 :global(.biq-checkmark-icon) {
   fill: none;
   stroke-miterlimit: 10;

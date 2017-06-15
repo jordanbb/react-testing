@@ -4,6 +4,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  transform: translate(-50%,-50%);
   transition: all .3s ease;
 
   :global .biq-checkmark-icon {

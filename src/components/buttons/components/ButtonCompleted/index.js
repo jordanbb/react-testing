@@ -6,7 +6,7 @@ import styles from "./buttonCompleted.scss"
 const ButtonCompleted = () => {
     return (
         <div className={styles.root}>
-            <CheckmarkIcon />
+            <CheckmarkIcon width="16px" height="20px" />
         </div>
     )
 };

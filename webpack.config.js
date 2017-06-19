@@ -71,6 +71,7 @@ module.exports = {
         extractSass
     ],
     devServer: {
+        historyApiFallback: true,
         compress: true,
         open:  true
     }

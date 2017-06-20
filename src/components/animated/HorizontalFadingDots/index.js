@@ -15,7 +15,7 @@ const HorizontalFadingDots = (props) => {
 };
 
 HorizontalFadingDots.propTypes = {
-    style: PropTypes.string
+    style: PropTypes.string.isRequired
 };
 
 export default HorizontalFadingDots;

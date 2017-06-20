@@ -10,12 +10,19 @@ const AuthLayout = props => {
             <div className={styles.main}>
                 <div className={styles.center}>
                     <div className={styles.scene}>
-                        {props.children}
+                        <h1 className={styles.h1}>{props.title}</h1>
+                        <form className={styles.form} noValidate>
+                            {props.children}
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     )
+};
+
+AuthLayout.propTypes = {
+    title: PropTypes.string.isRequired
 };
 
 export default AuthLayout;

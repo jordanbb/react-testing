@@ -13,7 +13,7 @@ class ResetPassword extends React.Component {
         const linkClassName = linkStyles['primary-dtl-8-with-underline-hover-white'];
 
         return (
-            <SceneLayout title="Reset Password">
+            <SceneLayout className={styles.scene} title="Reset Password">
                 <TextInput type="text" labelText="Username" />
                 <MainButton type="submit" text="Reset Password" />
                 <AuthFormFooter>

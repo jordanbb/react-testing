@@ -7,10 +7,8 @@ const AuthLayout = props => {
     return (
         <div>
             <MainHeader />
-            <div className={styles.main}>
-                <div className={styles.center}>
-                    {props.children}
-                </div>
+            <div className={styles.root}>
+                {props.children}
             </div>
         </div>
     )

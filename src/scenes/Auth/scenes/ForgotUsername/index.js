@@ -13,7 +13,7 @@ class ForgotUsername extends React.Component {
         const linkClassName = linkStyles['primary-dtl-8-with-underline-hover-white'];
 
         return (
-            <SceneLayout title="Forgot Username">
+            <SceneLayout className={styles.scene} title="Forgot Username">
                 <TextInput type="email" labelText="Email" />
                 <MainButton type="submit" text="Request Username" />
                 <AuthFormFooter>

@@ -2,5 +2,24 @@
 @import '~shared/css/helpers/mixins';
 
 .scene {
-  //composes: scene from "../../components/AuthLayout/authLayout.scss";
+  composes: scene from "../../components/SceneLayout/sceneLayout.scss";
+
+  &:global(.auth-scene-enter) {
+    transform: translate(-90%,-50%) translateZ(0);
+
+    &:global(.auth-scene-enter-active) {
+      transform: translate(-50%,-50%) translateZ(0);
+    }
+
+  }
+
+  &:global(.auth-scene-leave) {
+    transform: translate(-50%,-50%) translateZ(0);
+
+    &:global(.auth-scene-leave-active) {
+      transform: translate(-90%,-50%) translateZ(0);
+    }
+
+  }
+
 }

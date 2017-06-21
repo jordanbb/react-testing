@@ -1,0 +1,27 @@
+:global {
+
+  .auth-scene-enter,
+  .auth-scene-leave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  .auth-scene-enter,
+  .auth-scene-leave.auth-scene-leave-active {
+    opacity: 0;
+  }
+
+  .auth-scene-enter.auth-scene-enter-active,
+  .auth-scene-leave {
+    opacity: 1;
+  }
+
+  .auth-scene-enter-active,
+  .auth-scene-leave-active {
+    transition: all 0.3s ease-out;
+  }
+
+}

@@ -21,29 +21,23 @@ class App extends React.Component {
         return (
             <BrowserRouter>
                 <div>
-                    <Route render={({ location }) => (
-                        <AuthLayout>
-                            <CSSTransitionGroup
-                                transitionName="slide"
-                                transitionEnterTimeout={300}
-                                transitionLeaveTimeout={300}
-                            >
-                                <Switch key={location.key} location={location}>
-                                    <Route exact path="/" render={() => (
-                                        loggedIn ? (
-                                            <Redirect to="/home"/>
-                                        ) : (
-                                            <Redirect to="/login"/>
-                                        )
-                                    )}/>
-                                    <Route path="/login" component={Login} />
-                                    <Route path="/forgot-username" component={ForgotUsername} />
-                                    <Route path="/reset-password" component={ResetPassword} />
-                                </Switch>
-                            </CSSTransitionGroup>
-                        </AuthLayout>
-                    )}/>
                     <Route path="/home" component={Home} />
+                    <Route render={({ location }) => (
+                        <Auth>
+                            <Switch key={location.key} location={location}>
+                                <Route exact path="/" render={() => (
+                                    loggedIn ? (
+                                        <Redirect to="/home"/>
+                                    ) : (
+                                        <Redirect to="/login"/>
+                                    )
+                                )}/>
+                                <Route path="/login" component={Login} />
+                                <Route path="/forgot-username" component={ForgotUsername} />
+                                <Route path="/reset-password" component={ResetPassword} />
+                            </Switch>
+                        </Auth>
+                    )}/>
                 </div>
             </BrowserRouter>
         )

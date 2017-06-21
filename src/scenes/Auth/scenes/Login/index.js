@@ -13,7 +13,7 @@ class Login extends React.Component {
         const linkClassName = linkStyles['primary-dtl-8-with-underline-hover-white'];
 
         return (
-            <SceneLayout title="Welcome To BlueIQ">
+            <SceneLayout className={styles.scene} title="Welcome To BlueIQ">
                 <TextInput type="text" labelText="Username" />
                 <TextInput type="password" labelText="Password" />
                 <MainButton type="submit" text="Login" />

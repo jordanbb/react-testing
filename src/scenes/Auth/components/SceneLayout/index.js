@@ -4,7 +4,7 @@ import styles from "./sceneLayout.scss";
 
 const SceneLayout = props => {
     return (
-        <div className={styles.scene}>
+        <div className={props.className}>
             <h1 className={styles.h1}>{props.title}</h1>
             <form className={styles.form} noValidate>
                 {props.children}

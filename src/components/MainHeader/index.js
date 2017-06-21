@@ -5,7 +5,7 @@ import styles from "./MainHeader.scss";
 
 const MainHeader = props => {
     return (
-        <header className={styles.fixed}>
+        <header className={styles.header}>
             <div className={styles.inside}>
                 <Logo />
             </div>

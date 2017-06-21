@@ -16,10 +16,6 @@
   left: 0;
 }
 
-.static {
-
-}
-
 .inside {
   position: relative;
   display: flex;
@@ -28,7 +24,7 @@
   align-items: center;
   justify-content: space-between;
 
-  .fixed & {
+  .header & {
     box-sizing: border-box;
     height: 80px;
   }

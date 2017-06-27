@@ -27,7 +27,12 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
-                use: 'babel-loader'
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ["env", "react", "stage-2"]
+                    }
+                }
             },
             {
                 test: /\.scss$/,
@@ -72,7 +77,6 @@ module.exports = {
     ],
     devServer: {
         historyApiFallback: true,
-        compress: true,
-        open:  true
+        compress: true
     }
 };

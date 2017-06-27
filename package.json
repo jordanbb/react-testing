@@ -10,12 +10,6 @@
   "keywords": [
     "react"
   ],
-  "babel": {
-    "presets": [
-      "env",
-      "react"
-    ]
-  },
   "author": "Jordan Newby",
   "license": "MIT",
   "dependencies": {
@@ -24,14 +18,19 @@
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
-    "react-transition-group": "^1.2.0"
+    "react-transition-group": "^1.2.0",
+    "redux": "^3.7.1",
+    "redux-logger": "^3.0.6"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
-    "babel-loader": "^6.4.1",
-    "babel-preset-env": "^1.3.3",
+    "babel-loader": "^7.1.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-2": "^6.24.1",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.0",

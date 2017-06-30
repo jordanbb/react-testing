@@ -81,3 +81,24 @@ store.dispatch({
     type: "SUBTRACT",
     payload: 100
 });
+
+const hash = window.btoa('ryan:test');
+console.log(hash);
+
+const myHeaders = new Headers();
+//myHeaders.append("Content-Type", "text/plain");
+myHeaders.append( 'Authorization', `Basic ${hash}`);
+
+const myInit = {
+    method: "GET",
+    headers: myHeaders
+};
+
+function login() {
+    fetch('http://pms.blueiqtest.com:25834/blueserver/api', myInit)
+        .then(
+            console.log('Log in failed')
+        )
+}
+
+login();
